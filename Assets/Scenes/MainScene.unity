@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d023e884b9184f54ba67b840cfdf3860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snakeBodyPrefab: {fileID: 6095139481299632167, guid: 0988e0b465f43df4d81709407bb538ba, type: 3}
 --- !u!61 &1271666284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -619,7 +620,7 @@ GameObject:
   - component: {fileID: 1439280930}
   m_Layer: 0
   m_Name: Food
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
