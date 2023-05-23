@@ -6,13 +6,14 @@ public class SnakeMovement : MonoBehaviour
     private Vector2 _direction = Vector2.right;
 
     public Transform snakeBodyPrefab;
+    public int intialSize = 4;
 
     private List<Transform> _segments;
 
     private void Start()
     {
         _segments = new List<Transform>();
-        _segments.Add(this.transform);
+        ResetState();
     }
 
     private void Update()
@@ -76,6 +77,11 @@ public class SnakeMovement : MonoBehaviour
         }
         _segments.Clear();
         _segments.Add(this.transform);
+
+        for (int i = 1; i < this.intialSize; i++)
+        {
+            _segments.Add(Instantiate(this.snakeBodyPrefab));
+        }
         this.transform.position = Vector3.zero;
     }
 }
